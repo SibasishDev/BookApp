@@ -10,7 +10,7 @@ class MongoDB {
             await mongoose.connect(config.MONGO_DB_URL,
                 {
                     useNewUrlParser: true,
-                    // useUnifiedTopology: true,
+                    useUnifiedTopology: true,
                 });
 
                 console.log("Mongodb connected");
