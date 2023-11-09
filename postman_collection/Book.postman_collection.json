@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "3867c9af-d111-46ab-abf9-3699defbc7e0",
+		"name": "Book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28865789"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dassibasish46123@gmail.com\",\r\n    \"name\" : \"Sibasish\",\r\n    \"password\" : \"Lucky@123\",\r\n    \"repeatPassword\" : \"Lucky@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dassibasish46@gmail.com\",\r\n    \"password\" : \"Lucky@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/auth/get-token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJmNjRmYWQzOThlZjUzYzBmMzUzNCIsImlhdCI6MTY5OTQ3Nzg3MCwiZXhwIjoxNjk5NTY0MjcwfQ.9aCEsoXvIyL423sbJ_Zc3yYBlnVDlAraGncHr3Tm650",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/get-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"get-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/create-book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJiYWRiMWZlZmEyNDY2NDAxOWJiMyIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJyb2xlIjoxLCJpYXQiOjE2OTk0NjI0MDIsImV4cCI6MTY5OTQ2NjAwMn0.JUfR2DAfnVs0EtbBbxsOsRwzRLL7p_zFzoH4xxVd-L0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Making India Awesome2\",\r\n    \"author\" : \"Chetan Bhagat1\",\r\n    \"summary\" : \"Making India Awesome\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/create-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"create-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/get-all-books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM5MWI0ZDEzOTc0ZTUyMWJlMGYxZSIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJpYXQiOjE2OTk1MTY4NjIsImV4cCI6MTY5OTUyMDQ2Mn0.n1ILbf1k1yADLDFtKmXHwLLLzd94Mn4V9Ut2_xZsX_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/user/get-all-books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"get-all-books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/update-book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM5MWI0ZDEzOTc0ZTUyMWJlMGYxZSIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJpYXQiOjE2OTk1MTY4NjIsImV4cCI6MTY5OTUyMDQ2Mn0.n1ILbf1k1yADLDFtKmXHwLLLzd94Mn4V9Ut2_xZsX_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\" : \"654c89f28d53063765ca2caa\",\r\n    \"title\" : \"Making India Awesome\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/update-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"update-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/get-book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM5MWI0ZDEzOTc0ZTUyMWJlMGYxZSIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJpYXQiOjE2OTk1MTY4NjIsImV4cCI6MTY5OTUyMDQ2Mn0.n1ILbf1k1yADLDFtKmXHwLLLzd94Mn4V9Ut2_xZsX_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\" : \"654c89f28d53063765ca2caa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/get-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"get-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/delete-book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM5MWI0ZDEzOTc0ZTUyMWJlMGYxZSIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJpYXQiOjE2OTk1MTY4NjIsImV4cCI6MTY5OTUyMDQ2Mn0.n1ILbf1k1yADLDFtKmXHwLLLzd94Mn4V9Ut2_xZsX_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\" : \"654c8cad6d38ce1d16446e3c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/delete-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"delete-book"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
