@@ -42,6 +42,8 @@ const MongoDB = require("./config/mongodb.connection");
     app.use(compression());
 
     app.use(express.static("public"));
+
+    
    
     app.use("/api", new Routes().getRouters());
 

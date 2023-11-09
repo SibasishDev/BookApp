@@ -2,9 +2,9 @@
   "name": "todo-bookapp",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon app.js"
+    "start:dev": "nodemon index.js"
   },
   "author": "Sibasish Das",
   "license": "ISC",
