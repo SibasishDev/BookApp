@@ -49,6 +49,10 @@ const MongoDB = require("./config/mongodb.connection");
 
     app.use(errorResponse);
 
+    app.use("/", (req,res,next) => {
+      res.send("Hello from server");
+    })
+
     app.use("*", (req, res) => {
       return res.status(404).json({
           code: 404,
